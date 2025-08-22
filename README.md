@@ -39,7 +39,7 @@ flowchart LR
 ### 1) Descargar/clonar el repositorio
 ```bash
 git clone https://github.com/559Emmanuel/ROMI-Asistente-M-dico-Virtual
-cd patients_api
+cd ROMI-Asistente-M-dico-Virtual
 ```
 
 ### 2) Crear entorno virtual (opcional pero recomendado)
