@@ -1,4 +1,3 @@
-
 # API de Pacientes (FastAPI + SQLite)
 
 API REST  para **registrar** y **consultar** pacientes (nombre, edad, síntomas).  
@@ -39,18 +38,30 @@ flowchart LR
 
 ### 1) Descargar/clonar el repositorio
 ```bash
-git clone <URL-DE-TU-REPO>
+git clone https://github.com/559Emmanuel/ROMI-Asistente-M-dico-Virtual
 cd patients_api
 ```
 
-### 2) Crear entorno virtual (opcional)
+### 2) Crear entorno virtual (opcional pero recomendado)
 ```bash
 python -m venv .venv
-# Linux/Mac
-source .venv/bin/activate
-# Windows (PowerShell)
-.venv\Scripts\Activate.ps1
 ```
+
+- **Activar el entorno virtual**  
+  - En **Linux/Mac**:  
+    ```bash
+    source .venv/bin/activate
+    ```  
+  - En **Windows (PowerShell)**:  
+    ```powershell
+    .venv\Scripts\Activate.ps1
+    ```  
+
+- **Desactivar el entorno virtual**  
+  En cualquier sistema operativo, dentro del entorno ejecuta:  
+  ```bash
+  deactivate
+  ```
 
 ### 3) Instalar dependencias
 ```bash
@@ -107,19 +118,7 @@ curl http://127.0.0.1:8000/patients/1
 
 ---
 
-## ✅ Notas
-
-- En **modo memoria** puedes cambiar la conexión en `main.py` a:  
-  ```python
-  DATABASE_URL = "sqlite+pysqlite:///:memory:?cache=shared"
-  ```
-  Esto no persiste los datos al reiniciar el servidor.  
-
-- La API genera automáticamente la tabla `patients` en SQLite si no existe.  
-
----
-
-## 📌 Roadmap (mejoras sugeridas)
+## 📌 Roadmap (mejoras a futuro)
 
 - CRUD completo (PUT, PATCH, DELETE).  
 - Paginación en `GET /patients`.  
@@ -132,4 +131,4 @@ curl http://127.0.0.1:8000/patients/1
 
 ## 📜 Licencia
 
-Uso libre con fines del reto/educativos. Ajusta según la política de tu organización.
+Uso libre con fines del reto.
